@@ -220,6 +220,7 @@ export default function MapView() {
                     ? 'bg-gradient-to-r from-amber-700 to-yellow-600 text-amber-50 shadow-md'
                     : 'bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/40 border border-amber-700/20'
                 }`}
+                title={`View ${category.name}`}
               >
                 {category.emoji} {category.name}
               </button>
