@@ -5,6 +5,7 @@ import { useAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import ManualMap from "./ManualMap";
 import Logo from "./Logo";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function MapView() {
   const { user, logout } = useAuth();
@@ -155,11 +156,8 @@ export default function MapView() {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-gray-100">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-lg text-gray-600">Loading your reality bridge...</p>
-        </div>
+      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-stone-900">
+        <LoadingSpinner size="large" text="Loading your reality bridge..." />
       </div>
     );
   }
